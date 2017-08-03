@@ -1,1 +1,513 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  padding: 10vh 18vw;
+  animation: fadeIn 2s ease; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.logo img {
+  width: 21vw;
+  max-width: 350px; }
+
+nav {
+  width: calc(100vw - 2*15vw - 21vw - 12vw); }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    nav ul li {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase; }
+      nav ul li a {
+        display: inline-block; }
+      nav ul li a:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        margin: 3px 0;
+        background-color: #aeaeae; }
+      nav ul li a:hover::after {
+        width: 100%;
+        transition: width linear 0.5s; }
+
+.tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  margin: 80px 0 0 0;
+  width: 64vw; }
+
+.col-left, .nowrap-row, .tile.big {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 30.4761904762vw; }
+
+.nowrap-row {
+  flex-wrap: nowrap; }
+
+.tile {
+  background-color: #D5C9C9;
+  margin: 1.5vw 0;
+  box-sizing: border-box; }
+  .tile.small {
+    width: 13.6170212766vw;
+    height: 12.8vw; }
+  .tile.medium {
+    width: 32vw;
+    height: 12.8vw; }
+  .tile.big {
+    height: 28.6vw;
+    background: url("/src/assets/img/photo-main-large.png") center;
+    background-size: 100% 100%; }
+  .tile img {
+    width: 100%;
+    height: 100%; }
+
+.frame {
+  border: solid 4px #ffffff;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.3em;
+  margin: auto;
+  width: 80%;
+  height: 75%;
+  z-index: 1; }
+  .frame p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    text-align: center; }
+  .frame p.light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-weight: 100; }
+
+/*materials*/
+.page-title, .materials ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 34px;
+  text-align: right;
+  margin-top: 36px; }
+
+.materials {
+  position: absolute;
+  width: 100vw;
+  left: 0; }
+  .materials ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch; }
+    .materials ul li {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.17em;
+      color: #ffffff;
+      text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: auto;
+      height: 110px;
+      background-color: #999999;
+      padding: 1em 0;
+      margin: 60px 3px;
+      box-sizing: border-box;
+      flex: 1; }
+      .materials ul li.brick {
+        background: url("/src/assets/img/brick.jpg") center;
+        background-size: 100% 500%; }
+      .materials ul li.glass {
+        background: url("/src/assets/img/glass.jpg") bottom;
+        background-size: 100% 500%; }
+      .materials ul li.marble {
+        background: url("/src/assets/img/marble.jpg") center;
+        background-size: 100% 500%; }
+
+.description {
+  border: solid 3px #dedede;
+  margin-top: 260px;
+  padding: 10% 12%; }
+  .description p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #4b4b4b;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    margin: 30px 0;
+    font-size: 24px; }
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.17em;
+  font-size: 38px;
+  margin: 0 0 40px 0; }
+
+/*architects*/
+.architects {
+  margin: 50px 0;
+  position: absolute;
+  width: 64vw;
+  height: auto; }
+  .architects ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: 220px; }
+    .architects ul li {
+      width: 8vw;
+      height: 8vw;
+      border-radius: 50%;
+      background-color: #4b4b4b;
+      overflow: hidden; }
+      .architects ul li img {
+        width: 100%;
+        height: 100%; }
+
+button {
+  width: 400px;
+  height: 80px;
+  margin-top: -50px;
+  padding: 10px auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: solid 3px #4b4b4b; }
+
+.projects {
+  text-align: center; }
+  .projects ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vw 0; }
+    .projects ul li {
+      margin: 5px;
+      border: solid 6px #dedede; }
+      .projects ul li img {
+        width: inherit;
+        height: inherit; }
+
+.size-little {
+  width: 17vw;
+  height: 22vw; }
+
+.size-medium {
+  width: 44vw;
+  height: 22vw; }
+
+.size-large {
+  width: 62.5vw;
+  height: 43vw; }
+
+/*gallery*/
+.gallery {
+  margin: 70px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .gallery .square {
+    height: 20vw;
+    width: 20vw;
+    background-color: #d9d9dd;
+    margin: 10px;
+    overflow: hidden; }
+    .gallery .square img {
+      margin: -90px -50px 0 0;
+      height: 150%; }
+
+/*contact*/
+.informations ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 6vw 0;
+  height: 330px; }
+  .informations ul li {
+    width: 11.5vw;
+    height: 11.5vw;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #000;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 5px;
+    background-color: #e6e6ea; }
+    .informations ul li.image {
+      background-color: #929296; }
+      .informations ul li.image img {
+        height: 55%;
+        margin-bottom: 27px; }
+    .informations ul li a:hover {
+      text-decoration: underline; }
+
+#map {
+  width: 100vw;
+  height: 20vw;
+  margin-left: -18vw;
+  background-color: #d9d9dd; }
+
+/**/
+@media only screen and (max-width: 1608px) {
+  .logo img {
+    width: 50vw;
+    max-width: 600px; }
+
+  nav {
+    width: 64vw;
+    margin-top: 50px; }
+
+  .col-left, .nowrap-row, .tile.big, .tile.big {
+    width: 64vw; }
+
+  .tile.big {
+    height: 53.3333333333vw; }
+
+  .tile.small, .tile.medium {
+    width: 18.2857142857vw;
+    height: 18.2857142857vw; }
+
+  .nowrap-row {
+    width: 41.5135135135vw; }
+
+  nav .page-title, nav .materials ul li, .materials ul nav li {
+    font-size: 40px; }
+
+  .architects ul li {
+    width: 10.5vw;
+    height: 10.5vw;
+    min-width: 90px;
+    min-height: 90px; }
+
+  button {
+    width: 300px; }
+
+  .size-little {
+    width: 27vw;
+    height: 29vw; }
+
+  .size-medium {
+    width: 70vw;
+    height: 30vw; }
+
+  .size-large {
+    width: 70vw;
+    height: 60vw; }
+
+  .gallery {
+    justify-content: center; }
+    .gallery .square {
+      height: 19.1044776119vw;
+      width: 19.1044776119vw; }
+
+  .informations {
+    margin: auto;
+    height: auto; }
+    .informations ul {
+      height: auto;
+      justify-content: center; }
+      .informations ul li {
+        width: 11vw;
+        height: 11vw;
+        font-size: 14px;
+        margin: 10px; }
+
+  #map {
+    min-height: 280px; } }
+/* tablet */
+@media only screen and (max-width: 940px) {
+  nav {
+    font-size: 16px; }
+
+  h3 {
+    font-size: 33px; }
+
+  .description {
+    margin-top: 220px; }
+    .description p {
+      font-size: 22px; }
+
+  .materials ul li {
+    font-size: 29px;
+    padding: 1.3em 0; }
+
+  .gallery .square {
+    height: 29.0909090909vw;
+    width: 29.0909090909vw; } }
+@media only screen and (max-width: 755px) {
+  body {
+    padding: 7vh 8vw; }
+
+  nav {
+    font-size: 14px;
+    width: 84vw; }
+
+  .tiles {
+    margin: 50px 0 0 0;
+    width: 84vw; }
+
+  .tile.big {
+    height: 69vw; }
+
+  .tile.small, .tile.medium {
+    width: 26.3vw;
+    height: 26.3vw; }
+
+  .col-left, .nowrap-row, .tile.big {
+    width: 84vw; }
+
+  .nowrap-row {
+    width: 55.5vw; }
+
+  .frame {
+    font-size: 2em; }
+
+  .page-title, .materials ul li {
+    font-size: 34px; }
+
+  .materials ul li {
+    height: 93px;
+    font-size: 25px;
+    margin: 40px 3px; }
+
+  .description p {
+    font-size: 20px; }
+
+  .architects {
+    width: 84vw; }
+
+  button {
+    width: 270px;
+    height: 65px; }
+
+  .gallery .square {
+    height: 64vw;
+    width: 64vw; }
+
+  .informations ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .informations ul li {
+      width: 150px;
+      height: 150px; }
+
+  #map {
+    margin-left: -8vw; } }
+@media only screen and (max-width: 600px) {
+  nav {
+    font-size: 20px; }
+    nav ul {
+      justify-content: center; }
+      nav ul li {
+        margin: 5px 12px; }
+
+  nav .page-title, nav .materials ul li, .materials ul nav li {
+    font-size: 30px; }
+
+  .materials ul li {
+    height: 75px;
+    font-size: 20px;
+    margin: 40px 3px; }
+
+  .description {
+    margin-top: 190px; }
+    .description h3 {
+      font-size: 30px;
+      margin-bottom: 25px; }
+    .description p {
+      font-size: 18px; }
+
+  .architects ul li {
+    min-width: 79px;
+    min-height: 79px; }
+
+  button {
+    width: 255px;
+    height: 58px;
+    font-size: 17px; } }
+/*mobile*/
+@media only screen and (max-width: 489px) {
+  nav {
+    font-size: 16px; }
+
+  .architects {
+    width: 80vw;
+    margin: 26px 0 30px 0; }
+    .architects ul {
+      height: 80px; }
+      .architects ul li {
+        min-width: 65px;
+        min-height: 65px;
+        margin: 0 14px; }
+
+  .description {
+    margin-top: 178px; }
+
+  .frame {
+    font-size: 1.5em; }
+
+  button {
+    width: 230px;
+    height: 51px;
+    font-size: 15px;
+    border-width: 2px; } }
+@media only screen and (max-width: 390px) {
+  .frame {
+    font-size: 1.3em; }
+
+  .description h3 {
+    font-size: 23px; }
+  .description p {
+    font-size: 16px; }
+
+  .materials ul li {
+    font-size: 18px;
+    padding: 1.5em 0; }
+
+  button {
+    width: 219px;
+    height: 46px;
+    font-size: 14px; } }
+
+/*# sourceMappingURL=styles.css.map */
