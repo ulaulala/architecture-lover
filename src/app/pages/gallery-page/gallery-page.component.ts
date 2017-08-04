@@ -5,7 +5,7 @@ import {Header} from '../../model/header.model';
 @Component({
   selector: 'app-gallery-page',
   templateUrl: './gallery-page.component.html',
-  styleUrls: ['./gallery-page.component.css'],
+  styleUrls: ['./gallery-page.component.scss'],
   providers: [HeaderComponent]
 })
 export class GalleryPageComponent implements OnInit {

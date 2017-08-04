@@ -1,0 +1,80 @@
+@import '../../../assets/css/mixins-and-variables';
+
+.informations {
+  ul {
+    @include display-flex;
+    margin: 6vw 0;
+    height: 330px;
+    li {
+      width: 11.5vw;
+      height: 11.5vw;
+      min-width: 200px;
+      min-height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include roboto-light;
+      color: #000;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0 5px;
+      background-color: #e6e6ea;
+      &.image {
+        background-color: #929296;
+        img {
+          height: 55%;
+          margin-bottom: 27px;
+        }
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#map {
+  width: 100vw;
+  height: 20vw;
+  margin-left: -$body-padding;
+  background-color: #d9d9dd;
+}
+
+@media only screen and (max-width: 1608px) {
+  .informations {
+    margin: auto;
+    height: auto;
+    ul {
+      height: auto;
+      justify-content: center;
+      li {
+        width: 11vw;
+        height: 11vw;
+        font-size: 14px;
+        margin: 10px;
+      }
+    }
+  }
+  #map {
+    min-height: 280px;
+  }
+}
+/*tablet*/
+@media only screen and (max-width: 755px) {
+  .informations {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  #map {
+    margin-left: -8vw;
+  }
+}

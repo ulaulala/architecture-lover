@@ -1,1 +1,113 @@
+@import '../../../assets/css/mixins-and-variables';
 
+.tiles {
+  @include display-flex;
+  flex-wrap: wrap-reverse;
+  margin: 80px 0 0 0;
+  width: $inside-width;
+}
+.col-left {
+  @include display-flex;
+  width: $inside-width/2.1;
+}
+.nowrap-row {
+  @extend .col-left;
+  flex-wrap: nowrap;
+}
+
+.tile {
+  background-color: #D5C9C9;
+  margin: 1.5vw 0;
+  box-sizing: border-box;
+  &.small {
+    width: $inside-width/4.7;
+    height: $inside-width/5;
+  }
+  &.medium {
+    width: $inside-width/2;
+    height: $inside-width/5;
+  }
+  &.big {
+    height: 2*$inside-width/5 + 3vw;
+    @extend .col-left;
+    background: url('../../../assets/img/photo-main-large.png') center;
+    background-size: 100% 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.frame {
+  border: solid 4px #ffffff;
+  color: #ffffff;
+  @include display-flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.3em;
+  margin: auto;
+  width: 80%;
+  height: 75%;
+  z-index: 1;
+  p {
+    @include roboto-regular;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p.light {
+    @include roboto-light;
+    font-weight: 100;
+  }
+}
+
+@media only screen and (max-width: 1408px) {
+  .col-left, .tile.big {
+    width: $inside-width;
+  }
+  .tile.big {
+    height: $inside-width/1.2;
+  }
+  .tile {
+    &.small, &.medium {
+      width: $inside-width/3.5;
+      height: $inside-width/3.5;
+    }
+  }
+  .nowrap-row {
+    width: 2.4*$inside-width/3.7;
+  }
+}
+/*tablet*/
+@media only screen and (max-width: 755px) {
+  .tiles {
+    margin: 50px 0 0 0;
+    width: 84vw;
+  }
+  .tile.big {
+    height: 69vw;
+  }
+  .tile.small, .tile.medium {
+    width: 26.3vw;
+    height: 26.3vw;
+  }
+  .col-left {
+    width: 84vw;
+  }
+  .nowrap-row {
+    width: 55.5vw;
+  }
+  .frame {
+    font-size: 2em;
+  }
+}
+/*mobile*/
+@media only screen and (max-width: 489px) {
+  .frame {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .frame {
+    font-size: 1.3em;
+  }
+}

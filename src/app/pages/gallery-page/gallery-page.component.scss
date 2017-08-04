@@ -1,0 +1,44 @@
+@import '../../../assets/css/mixins-and-variables';
+
+.gallery {
+  margin: 70px 0;
+  @include display-flex;
+  .square {
+    height: $inside-width/3.2;
+    width: $inside-width/3.2;
+    background-color: #d9d9dd;
+    margin: 10px;
+    overflow: hidden;
+    img {
+      margin: -90px -50px 0 0;
+      height: 150%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1608px) {
+  .gallery {
+    justify-content: center;
+    .square {
+      height: $inside-width/3.35;
+      width: $inside-width/3.35;
+    }
+  }
+}
+/* tablet */
+@media only screen and (max-width: 940px) {
+  .gallery {
+    .square {
+      height: $inside-width/2.2;
+      width: $inside-width/2.2;
+    }
+  }
+}
+@media only screen and (max-width: 755px) {
+  .gallery {
+    .square {
+      height: $inside-width;
+      width: $inside-width;
+    }
+  }
+}

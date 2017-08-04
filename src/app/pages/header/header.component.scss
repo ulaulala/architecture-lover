@@ -1,0 +1,88 @@
+@import '../../../assets/css/mixins-and-variables';
+
+header {
+  @include display-flex;
+}
+.logo img{
+  width: 21vw;
+  max-width: 350px;
+}
+nav {
+  width: calc(100vw - 2*15vw - 21vw - 12vw);
+  ul {
+    @include display-flex;
+    li {
+      @include roboto-light;
+      text-transform: uppercase;
+      a {
+        display: inline-block;
+      }
+      a:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        margin: 3px 0;
+        background-color: #aeaeae;
+      }
+      a:hover::after {
+        width: 100%;
+        transition: width linear 0.5s;
+      }
+    }
+  }
+}
+
+.page-title {
+  @include roboto-light;
+  text-transform: uppercase;
+  font-size: 35px;
+  text-align: right;
+  margin-top: 36px;
+}
+
+@media only screen and (max-width: 1608px) {
+  .logo img {
+    width: 50vw;
+    max-width: 400px;
+  }
+  nav {
+    width: $inside-width;
+    margin-top: 50px;
+  }
+}
+/* tablet */
+@media only screen and (max-width: 940px) {
+  nav {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 755px) {
+  nav {
+    font-size: 14px;
+    width: 84vw;
+  }
+  .page-title {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    font-size: 20px;
+    ul {
+      justify-content: center;
+      li {
+        margin: 5px 12px;
+      }
+    }
+  }
+  nav .page-title {
+    font-size: 30px;
+  }
+}
+/*mobile*/
+@media only screen and (max-width: 489px) {
+  nav {
+    font-size: 16px;
+  }
+}
