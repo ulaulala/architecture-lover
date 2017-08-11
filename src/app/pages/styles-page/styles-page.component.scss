@@ -1,0 +1,47 @@
+@import '../../../assets/css/mixins-and-variables';
+
+.styles {
+  .category {
+    .header {
+      height: 150px;
+      background-color: #000;
+      margin: 50px 0 0 0;
+      @include roboto-light;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 200%;
+      text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
+      @include display-flex;
+      align-self: stretch;
+      align-items: flex-end;
+      padding: 60px;
+      overflow: hidden;
+      img {
+        position: relative;
+        margin: -60px;
+        width: 130%;
+        height: 190%;
+        -webkit-filter: opacity(0.6);
+      }
+      p {
+        position: absolute;
+      }
+      &:hover {
+        cursor:pointer;
+      }
+    }
+    .description {
+      display: none;
+      margin-top: 5px;
+      padding: 10% 60px;
+    }
+    &:hover {
+      .header {
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+        img {
+          -webkit-filter: opacity(1);
+        }
+      }
+    }
+  }
+}

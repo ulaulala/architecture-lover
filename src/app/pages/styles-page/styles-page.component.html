@@ -1,1 +1,15 @@
 <app-header [header]="pageHeader"></app-header>
+<section class="styles">
+  <article class="category" *ngFor="let style of styles; let i=index" (click)="showDescription(i)">
+    <div class="header">
+      <img src="{{style.imageUrl}}">
+      <p>{{style.name}}</p>
+    </div>
+    <div class="description">
+      <h3>{{style.name}}</h3>
+      <p>
+        {{style.description}}
+      </p>
+    </div>
+  </article>
+</section>

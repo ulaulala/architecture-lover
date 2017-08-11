@@ -14,6 +14,31 @@
       margin: -90px -50px 0 0;
       height: 150%; }
 
+.modal {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: none; }
+  .modal .close {
+    width: 50px;
+    height: 50px;
+    margin: auto; }
+    .modal .close:hover {
+      cursor: pointer; }
+  .modal .main-image {
+    height: 70vh;
+    width: auto;
+    margin: auto; }
+
 @media only screen and (max-width: 1608px) {
   .gallery {
     justify-content: center; }

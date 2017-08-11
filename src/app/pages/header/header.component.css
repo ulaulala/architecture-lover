@@ -43,6 +43,11 @@ nav {
   margin-top: 36px; }
 
 @media only screen and (max-width: 1608px) {
+  nav {
+    font-size: 16px;
+    margin: 5px; } }
+/* tablet */
+@media only screen and (max-width: 940px) {
   .logo img {
     width: 50vw;
     max-width: 400px; }
@@ -50,10 +55,6 @@ nav {
   nav {
     width: 64vw;
     margin-top: 50px; } }
-/* tablet */
-@media only screen and (max-width: 940px) {
-  nav {
-    font-size: 16px; } }
 @media only screen and (max-width: 755px) {
   nav {
     font-size: 14px;
