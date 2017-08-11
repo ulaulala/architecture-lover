@@ -1,8 +1,23 @@
 @import 'mixins-and-variables';
 
+* {
+  transition: -webkit-filter 0.3s linear;
+}
+
 body {
   padding: 10vh $body-padding;
   animation: fadeIn 2s ease;
+}
+button {
+  width: 400px;
+  height: 80px;
+  margin-top: -50px;
+  padding: 10px auto;
+  @include roboto-light;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: solid 3px #4b4b4b;
 }
 
 /*materials and architects*/
@@ -25,6 +40,11 @@ h3 {
   margin: 0 0 40px 0;
 }
 
+@media only screen and (max-width: 1608px) {
+  button {
+    width: 300px;
+  }
+}
 /* tablet */
 @media only screen and (max-width: 940px) {
   h3 {
@@ -46,6 +66,10 @@ h3 {
       font-size: 20px;
     }
   }
+  button {
+    width: 270px;
+    height: 65px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .description {
@@ -64,6 +88,12 @@ h3 {
   .description {
     margin-top: 178px;
   }
+  button {
+    width: 230px;
+    height: 51px;
+    font-size: 15px;
+    border-width: 2px;
+  }
 }
 @media only screen and (max-width: 390px) {
   .description{
@@ -73,5 +103,10 @@ h3 {
     p {
       font-size: 16px;
     }
+  }
+  button {
+    width: 219px;
+    height: 46px;
+    font-size: 14px;
   }
 }

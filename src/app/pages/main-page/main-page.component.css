@@ -61,7 +61,11 @@
     letter-spacing: 0.1em;
     font-weight: 100; }
 
-@media only screen and (max-width: 1408px) {
+@media only screen and (max-width: 1608px) {
+  .frame {
+    font-size: 1.5em; } }
+/*tablet*/
+@media only screen and (max-width: 940px) {
   .col-left, .nowrap-row, .tile.big, .tile.big {
     width: 64vw; }
 
@@ -74,7 +78,6 @@
 
   .nowrap-row {
     width: 41.5135135135vw; } }
-/*tablet*/
 @media only screen and (max-width: 755px) {
   .tiles {
     margin: 50px 0 0 0;
@@ -97,6 +100,9 @@
     font-size: 2em; } }
 /*mobile*/
 @media only screen and (max-width: 489px) {
+  .tiles {
+    margin: 10px 0 0 0; }
+
   .frame {
     font-size: 1.5em; } }
 @media only screen and (max-width: 390px) {

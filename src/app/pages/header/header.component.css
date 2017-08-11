@@ -38,23 +38,26 @@ nav {
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 34px;
   text-align: right;
   margin-top: 36px; }
 
 @media only screen and (max-width: 1608px) {
-  nav {
+  nav ul li a {
     font-size: 16px;
     margin: 5px; } }
 /* tablet */
 @media only screen and (max-width: 940px) {
   .logo img {
     width: 50vw;
-    max-width: 400px; }
+    max-width: 600px; }
 
   nav {
     width: 64vw;
-    margin-top: 50px; } }
+    margin-top: 50px;
+    font-size: 16px; }
+    nav .page-title {
+      font-size: 40px; } }
 @media only screen and (max-width: 755px) {
   nav {
     font-size: 14px;
@@ -74,7 +77,14 @@ nav {
     font-size: 30px; } }
 /*mobile*/
 @media only screen and (max-width: 489px) {
-  nav {
-    font-size: 16px; } }
+  nav .mobile-menu {
+    display: block;
+    text-align: right; }
+  nav ul {
+    display: none; }
+    nav ul.mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; } }
 
 /*# sourceMappingURL=header.component.css.map */

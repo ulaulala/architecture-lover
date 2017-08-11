@@ -16,23 +16,13 @@
       border-radius: 50%;
       background-color: #4b4b4b;
       overflow: hidden;
+      cursor: pointer;
       img {
         width: 100%;
         height: 100%;
       }
     }
   }
-}
-button {
-  width: 400px;
-  height: 80px;
-  margin-top: -50px;
-  padding: 10px auto;
-  @include roboto-light;
-  text-transform: uppercase;
-  font-size: 20px;
-  background-color: #ffffff;
-  border: solid 3px #4b4b4b;
 }
 .projects {
   text-align: center;
@@ -71,9 +61,6 @@ button {
     min-width: 90px;
     min-height: 90px;
   }
-  button {
-    width: 300px;
-  }
   .size-little {
     width: 27vw;
     height: 29vw;
@@ -90,10 +77,6 @@ button {
 @media only screen and (max-width: 755px) {
   .architects {
     width: 84vw;
-  }
-  button {
-    width: 270px;
-    height: 65px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -120,18 +103,5 @@ button {
         margin: 0 14px;
       }
     }
-  }
-  button {
-    width: 230px;
-    height: 51px;
-    font-size: 15px;
-    border-width: 2px;
-  }
-}
-@media only screen and (max-width: 390px) {
-  button {
-    width: 219px;
-    height: 46px;
-    font-size: 14px;
   }
 }

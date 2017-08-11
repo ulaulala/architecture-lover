@@ -60,7 +60,13 @@
   }
 }
 
-@media only screen and (max-width: 1408px) {
+@media only screen and (max-width: 1608px) {
+  .frame {
+    font-size: 1.5em;
+  }
+}
+/*tablet*/
+@media only screen and (max-width: 940px) {
   .col-left, .tile.big {
     width: $inside-width;
   }
@@ -77,7 +83,6 @@
     width: 2.4*$inside-width/3.7;
   }
 }
-/*tablet*/
 @media only screen and (max-width: 755px) {
   .tiles {
     margin: 50px 0 0 0;
@@ -102,6 +107,9 @@
 }
 /*mobile*/
 @media only screen and (max-width: 489px) {
+  .tiles {
+    margin: 10px 0 0 0;
+  }
   .frame {
     font-size: 1.5em;
   }
